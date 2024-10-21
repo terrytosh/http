@@ -19,6 +19,7 @@ async fn main() {
 
 async fn handle_request(req: Request<Body>) -> Result<Response<Body>, Infallible> {
     // Match on the request method type [GET, POST, etc]
+    // small change
     match req.method() {
         &Method::GET => {      
             match req.uri().path() {
